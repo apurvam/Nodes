@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Nodes</title>
+  </head>
+
+  <body>
+<a name="top"></a>    <h1>Nodes</h1>
+
+<p> <i> The latest version of Nodes is 0.01 </i></p>
+
+<h3> Table of contents </h3>
+<p><ul>
+<li> <a href="#introduction">Introduction</a>
+<li> <a href="#design">Design</a>
+<li> <a href="#future"> Future Plans </a>
+<li> <a href = "#current"> Current Status </a>
+<li> <a href = "#devenv"> Development Environment </a>
+<li> <a href = "#getting"> Getting Nodes </a>
+</ul>
+
+<hr>
+
+<a name="introduction"></a><h3>Introduction </h3>
+<p> Nodes is an operating system kernel which is being developed by
+      me, Apurva Mehta, as an effort to get some practical experience with
+      operating system development. I am a 20 year old Computer
+      Engineering student in Mumbai, India. </p>
+
+<p> The name <b>Nodes</b> stands for <b>NO DES</b>ign. Basically I am
+writing it to get familiar with my IA-32 machine, with the GNU
+development tools and with operating system development concepts. The
+ultimate goal is to write an operating system which is
+      <i>mathematically</i> correct. I believe that programming is a
+      scientific discipline and my hope is to write an operating
+      system in that spirit. Nodes is just a stepping stone toward
+      that goal. I continue to research the math needed in
+      accomplishing that goal while Nodes is being written.</p>
+
+<p><a href="#top">Back to Top </a></p>
+<hr>
+
+<a name="design"></a><h3>Design</h3> 
+<p>When I explained the meaning of the name, I really
+meant what I said. There has been absolutely no design process
+involved in the construction of Nodes. </p>
+
+<p> There are two things that you might find helpful if you want to
+      have a look at the Nodes source code.
+<ol>
+<li> Nodes is a monolithic kernel.
+<li> The source code layout is modelled on that of Linux.
+</ol>
+</p>
+
+
+<p><a href="#top">Back to Top </a></p>
+<hr>
+
+<a name="future"></a><h3>Future Plans</h3>
+<p> I do not intend Nodes to be a UNIX clone. As a result of this
+      decision, I have no System Call Interface in mind at the moment.
+      I do not think there will ever be such a formal specification for
+      Nodes. I think that I will be the only one writing programs for
+      Nodes and those programs will exist purely to test the
+      capability of the kernel. Not to make it useful. </p>
+
+<p> However, There are a lot of things I want to do with Nodes before I move on:
+<ul>
+<li> A memory management infrastructure which allows for paging and
+	virtual memory.
+<li> A task management infrastructure. 
+<li> A disk driver
+<li> A terminal driver
+</ul>
+</p>
+
+<p> If you also believe that programming is a scientific discipline
+      and want to help me design and build an OS which can be
+      mathematically proven to work, then please get in touch with me. My
+      inspiration is Edsger Dijkstra and I find his papers an
+      invaluable source of information. You can find many of his
+      papers online <a href="http://www.cs.utexas.edu/users/EWD/">here
+	</a>. </p>
+<p> If you have no OS development experience and want to get started,
+      then you will find that Nodes is so small that it is easy to understand. </p>
+
+<p><a href="#top">Back to Top </a></p>
+<hr>
+
+<a name="current"></a><h3>Current Status</h3>
+<p> Currently, Nodes has the following features:
+<ul>
+<li> A keyboard driver.
+<li> An interrupt handling infrastructure capable of handling shared
+	IRQ lines.
+</ul>
+</p>
+
+
+<p><a href="#top">Back to Top </a></p>
+<hr>
+
+
+<a name="devenv"></a><h3> Development environment </h3>
+
+<p>The programming language for Nodes is ANSI C. x86 assembly is used only
+      when there is no way doing a particular thing in C. </p>
+
+<p> The GNU development tools are the tools of choice for developing
+      Nodes. These include :
+<ul>
+<li> <a href="http://gcc.gnu.org/">The GNU C compiler</a> (3.2.2)
+<li> <a href="http://www.gnu.org/software/binutils"> The GNU Assembler </a>(2.13.9)
+<li> <a href="http://www.gnu.org/software/make">GNU Make </a>(3.79.1)
+<li> <a href="http://www.gnu.org/software/gnu-arch/"> GNU Arch </a>(1.1)
+<li> <a href="http://www.gnu.org/software/binutils">The GNU Linker </a>(2.13.9)
+</ul>
+ </p>
+
+
+<p><a href="#top">Back to Top </a></p>
+<hr>
+
+<a name="getting"></a><h3> Getting Nodes </h3>
+<p> You can download Nodes from the following locations:
+<ul>
+<li> <a href="files/nodes-0.01.tar.bz2">
+	 http://nodes.50g.com/files/nodes-0.01.tar.bz2
+	</a>
+</ul>
+</p>
+
+<p> Nodes uses GNU Grub as its bootloader. If you do not already have
+Grub installed, you can get it from <a
+href="http://www.gnu.org/software/grub">here</a>. Alternatively, I
+have prepared a bootable floppy image which contains GNU Grub as well
+as Nodes. You can download this image <a
+href="files/nodes.img.bz2">here</a>. You must first uncompress this
+      image and then write it straight to a floppy. On UNIX systems,
+      you can use dd, on Windows Systems rawrite is available.</p>
+
+<p><a href="#top">Back to Top </a></p>
+    <hr>
+    <p><address><a href="mailto:apurva@gmx.net">Apurva
+    Mehta</a></address> 
+
+    <!-- Created: Sat Jan 17 15:02:33 IST 2004 -->
+    <!-- hhmts start --> 
+      <li>Last Updated 17th January 2004 
+<!-- hhmts end -->
+  </body>
+</html>
